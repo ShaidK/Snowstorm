@@ -29,4 +29,10 @@ jobs:
             - name: Package up the VSIX File
               run: npm run build
 
+            - name: Upload Build Artifact
+              run: actions/upload-artifact@master
+              with:
+                  name: Snowstorm-VSIX
+                  path: d:\a\Snowstorm\Snowstorm\snowstorm-theme.vsix
+
 
