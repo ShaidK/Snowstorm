@@ -37,4 +37,10 @@ jobs:
                   name: Snowstorm-VSIX
                   path: d:\a\Snowstorm\Snowstorm\snowstorm-theme.vsix
 
+            - name: Publish Snowstorm Theme to Visual Studio Code Marketplace
+              if: github.ref == 'refs/heads/build'
+              env: 
+                  VS_CODE_SECRET: ${{ secrets.SNOWSTORM_VISUAL_STUDIO_CODE }}
+              run: vcse publish -p $VS_CODE_SECRET
+
 
