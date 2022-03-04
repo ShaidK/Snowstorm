@@ -1,0 +1,47 @@
+{
+    "name": "snowstorm-color-theme",
+    "version": "0.1.0",
+    "publisher": "ShaidK",
+    "engines": {
+        "vscode": "^1.0.0"
+    },
+    "license": "SEE LICENSE IN LICENSE",
+    "displayName": "Snowstorm",
+    "description": "Clean & Elegant Visual Studio Code Theme",
+    "categories": 
+    [
+        "Themes", "Other"
+    ],
+    "keywords": 
+    [
+        "Snowstorm", "Theme", "White", "Clean", "Light"
+    ],
+    "galleryBanner": {
+        "color": "#FFFFFF",
+        "theme": "light"
+    },
+    "preview": false,
+    "contributes": {
+        "themes": [
+            {
+                "label": "Snowstorm",
+                "uiTheme": "vs",
+                "path": "./themes/snowstorm-color-theme.json."
+            }
+        ]
+    },
+    "markdown": "github",
+    "qna": "false",
+    "author": {
+        "name": "Shaid Khan",
+        "url": "https://github.com/ShaidK/Snowstorm"
+    },
+    "bugs": {
+        "url": "https://github.com/ShaidK/Snowstorm/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ShaidK/Snowstorm"
+    },
+    "homepage": "https://github.com/ShaidK/Snowstorm/blob/build/README.md"
+}
