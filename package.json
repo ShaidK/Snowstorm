@@ -1,6 +1,6 @@
 {
     "name": "snowstorm-color-theme",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "publisher": "ShaidK",
     "engines": {
         "vscode": "^1.0.0"
@@ -43,5 +43,8 @@
         "type": "git",
         "url": "https://github.com/ShaidK/Snowstorm"
     },
-    "homepage": "https://github.com/ShaidK/Snowstorm/blob/build/README.md"
+    "homepage": "https://github.com/ShaidK/Snowstorm/blob/build/README.md",
+    "scripts": {
+        "build": "del /s *.vsix"
+    }
 }

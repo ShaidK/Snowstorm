@@ -1,5 +1,5 @@
 /*
- * File: launch.json | Note: Integrated to build & launch the Extension Host
+ * File: tasks.json | Note: Integrated Tasks to build & execute npm scripts 
  */
 
 /*
@@ -26,19 +26,19 @@
  * SOFTWARE.
  */
 
- {
-    "version": "0.2.0",
-    "configurations": 
+{
+    "version": "2.0.0",
+    "tasks": 
     [
         {
-            "name": "Snowstorm - Extension Host",
-            "preLaunchTask": "Build Snowstorm Project",
-            "type": "extensionHost",
-            "request": "launch",
-            "runtimeExecutable": "${execPath}",
-            "args": [
-                "--extensionDevelopmentPath=${workspaceFolder}"
-            ]            
+            "label": "Build Snowstorm Project",
+            "detail": "Execute 'npm' Scripts to build the Snowstorm Project",
+            "script": "build",
+            "group":  "build",
+            "type": "npm",
+            "presentation": {
+                "showReuseMessage": false, "clear": true
+            }
         }
     ]
 }
