@@ -1,5 +1,5 @@
 #
-# File: .gitattributes | Note: Integrated to specify additional repository configurations
+# File: .eslintignore | Note: Integrated to exclude linting of specific Files 
 #
 
 #
@@ -26,7 +26,7 @@
 # SOFTWARE.
 #
 
-*.json linguist-detectable=true
+!.vscode
 
-*.vsix binary
-*.png  binary
+.github/
+*.vsix
