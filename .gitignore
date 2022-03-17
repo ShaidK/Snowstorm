@@ -2,6 +2,7 @@
 # File: .gitignore | Note: Integrated to ignore Files which shouldn't be committed within repository
 #
 
+#
 # MIT License
 # 
 # Copyright (c) 2022 Shaid Khan
@@ -23,6 +24,7 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
+#
 
 **/node_modules/
 

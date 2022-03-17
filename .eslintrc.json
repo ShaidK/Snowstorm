@@ -1,8 +1,8 @@
 /*
- * File: launch.json | Note: Integrated to build & launch the Extension Host
+ * File: eslintrc.json | Note: Specifies configurations for the JSON File Linting 
  */
 
-/*
+/* 
  * MIT License
  * 
  * Copyright (c) 2022 Shaid Khan
@@ -27,18 +27,34 @@
  */
 
 {
-    "version": "0.2.0",
-    "configurations": 
-    [
-        {
-            "name": "Snowstorm - Extension Host",
-            "preLaunchTask": "Build Snowstorm Project",
-            "type": "extensionHost",
-            "request": "launch",
-            "runtimeExecutable": "${execPath}",
-            "args": [
-                "--extensionDevelopmentPath=${workspaceFolder}"
-            ]            
-        }
-    ]
+    "root": true,
+    "extends": [
+        "plugin:jsonc/recommended-with-json"
+    ],
+    "rules": {
+        "jsonc/key-spacing": [
+            "error", { "beforeColon": false, "afterColon": true, "mode": "minimum" }
+        ],
+        "jsonc/array-bracket-spacing": [
+            "error", "always"
+        ],
+        "jsonc/no-comments": [
+            "off"
+        ],
+        "jsonc/comma-style": [
+            "error", "last"
+        ],
+        "jsonc/indent": [
+            "warn", 4
+        ],
+        "jsonc/object-curly-newline": [
+            "error", { "consistent": true }
+        ],
+        "jsonc/quote-props": [
+            "error", "always"
+        ],
+        "jsonc/quotes": [
+            "error", "double"
+        ]
+    }
 }
