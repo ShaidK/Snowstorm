@@ -34,4 +34,7 @@ node_modules/**
 .gitattributes
 .gitignore
 
+.eslintrc.json
+.eslintignore
+
 package-lock.json
