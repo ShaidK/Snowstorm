@@ -29,6 +29,7 @@
 !.vscode
 
 .github/
+.img/
 *.vsix
 
 .gitattributes
