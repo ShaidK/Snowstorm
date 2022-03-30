@@ -1,6 +1,6 @@
 {
     "name": "snowstorm-color-theme",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "publisher": "ShaidK",
     "engines": {
         "vscode": "^1.0.0"
@@ -51,9 +51,12 @@
         "lint:md": "markdownlint . -d -i node_modules",
         "lint:json": "eslint . --ext .json",
 
-        "build": "run-s -l clean lint:*",
+        "build": "run-s -l clean lint:* package",
         "clean": "del /s *.vsix",
-        
+
+        "postpackage": "vsce ls",
+        "package": "vsce package",
+
         "postinstall": "npm ls --depth 1 --dev"
     },
     "devDependencies": {
@@ -61,6 +64,7 @@
         "eslint": "^8.11.0",
 
         "markdownlint-cli": "^0.31.1",
+        "vsce": "^2.7.0",
 
         "npm-run-all": "^4.1.5"
     }
