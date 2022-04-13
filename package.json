@@ -1,6 +1,6 @@
 {
     "name": "snowstorm-color-theme",
-    "version": "1.3.0",
+    "version": "1.4.0",
     "publisher": "ShaidK",
     "engines": {
         "vscode": "^1.0.0"
@@ -47,31 +47,33 @@
         "url": "https://github.com/ShaidK/Snowstorm"
     },
     "homepage": "https://github.com/ShaidK/Snowstorm/blob/build/README.md",
-    "funding": [ 
+    "funding": [
         {
             "type": "buymeacoffee",
             "url": "https://www.buymeacoffee.com/ShaidK"
         }
-     ],
+    ],
     "scripts": {
-        "lint:md": "markdownlint . -d -i node_modules",
+        "lint:mark": "markdownlint . -d -i node_modules",
         "lint:json": "eslint . --ext .json",
-
+        "lint:yaml": "eslint . --ext .yaml",
+        
         "build": "run-s -l clean lint:* package",
         "clean": "del /s *.vsix",
-
+        
         "postpackage": "vsce ls",
         "package": "vsce package",
 
         "postinstall": "npm ls --depth 1 --dev"
     },
     "devDependencies": {
-        "eslint-plugin-jsonc": "2.2.1",
         "eslint": "^8.11.0",
+        "eslint-plugin-jsonc": "^2.2.1",
+        "eslint-plugin-yaml": "^0.5.0",
 
         "markdownlint-cli": "^0.31.1",
-        "vsce": "^2.7.0",
 
-        "npm-run-all": "^4.1.5"
+        "npm-run-all": "^4.1.5",
+        "vsce": "^2.7.0"
     }
 }
