@@ -28,7 +28,6 @@
 
 !.vscode
 
-.github/
 .img/
 *.vsix
 

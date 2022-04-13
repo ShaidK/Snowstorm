@@ -28,8 +28,12 @@
 
 {
     "root": true,
+    "plugins": [
+        "yaml"
+    ],
     "extends": [
-        "plugin:jsonc/recommended-with-json"
+        "plugin:jsonc/recommended-with-json",
+        "plugin:yaml/recommended"
     ],
     "rules": {
         "jsonc/key-spacing": [
