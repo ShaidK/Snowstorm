@@ -1,7 +1,8 @@
+<!-- markdownlint-disable-file MD033 -->
+<!-- markdownlint-disable-file MD036 -->
 <!-- markdownlint-disable-file MD041 -->
 ![Snowstorm](img/snowstorm_backdrop.png)
 
-<!-- markdownlint-disable-file MD036 -->
 **INSTALLATION**
 
 The "Snowstorm Project" is a clean & elegant [Visual Studio Code Theme][1] designed
@@ -40,6 +41,10 @@ command:
 ```powershell
 npm run build
 ```
+
+<p align="center">
+    <img alt="polar_bear" src="./img/polar_bear.png" />
+</p>
 
 [1]: https://code.visualstudio.com/ "Visual Studio Code"
 [2]: https://code.visualstudio.com/docs/editor/extension-marketplace "Extension Marketplace"
