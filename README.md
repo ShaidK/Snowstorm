@@ -43,7 +43,7 @@ npm run build
 ```
 
 <p align="center">
-    <img alt="polar_bear" src="./img/polar_bear.png" />
+    <img alt="polar_bear" src="./img/polar-bear.png" />
 </p>
 
 [1]: https://code.visualstudio.com/ "Visual Studio Code"
