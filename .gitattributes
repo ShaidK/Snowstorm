@@ -27,6 +27,8 @@
 #
 
 *.json linguist-detectable=true
+*.yaml linguist-detectable=true
+*.md linguist-detectable=true
 
 *.vsix binary
 *.png  binary
