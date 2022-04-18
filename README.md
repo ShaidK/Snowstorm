@@ -42,6 +42,13 @@ command:
 npm run build
 ```
 
+**PIPELINES**
+
+The "Snowstorm Project" is configure with a Continuous Integration Pipeline to
+build the Project each time a Pull Request has been opened via "[Github Actions][12]".
+The Pipeline itself will build & lint the Project on different variations of
+"[NodeJS][7]".
+
 <p align="center">
     <img alt="polar_bear" src="./img/polar-bear.png" />
 </p>
@@ -57,3 +64,4 @@ npm run build
 [9]: https://code.visualstudio.com/api/advanced-topics/extension-host "Extension Host"
 [10]: https://github.com/ShaidK/Snowstorm/blob/build/package.json "Package JSON"
 [11]: https://code.visualstudio.com/Docs/editor/tasks "Task"
+[12]: https://docs.github.com/en/actions "Github Actions"

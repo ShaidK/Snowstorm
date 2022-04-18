@@ -1,6 +1,6 @@
 {
     "name": "snowstorm-color-theme",
-    "version": "1.5.1",
+    "version": "1.6.0",
     "publisher": "ShaidK",
     "engines": {
         "vscode": "^1.0.0"
