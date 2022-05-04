@@ -51,6 +51,14 @@ jobs:
     
     - name: Integrate Dependencies 
       run: npm ci
+
+    - name: Execute Security Audit
+      uses: oke-py/npm-audit-action@v2
+      with:
+        issue_title: FIXME - SECURITY ISSUE HAS BEEN IDENTIFIED
+        audit_level: moderate
+        create_pr_comments: false
+        github_token: ${{ secrets.GITHUB_TOKEN }}
       
     - name: Lint Markdown Files
       run: npm run lint:mark --if-present

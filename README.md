@@ -49,8 +49,12 @@ build the Project each time a Pull Request has been opened via "[Github Actions]
 The Pipeline itself will build & lint the Project on different variations of
 "[NodeJS][7]".
 
+Further security analysis will be conducted whereby if a security vulnerability
+has been identified, it will generate a issue providing information on the
+security vulnerability.
+
 <p align="center">
-    <img alt="polar_bear" src="./img/polar-bear.png" />
+    <img src="./img/polar-bear.png" style="width: 100px; padding: 50px;" />
 </p>
 
 [1]: https://code.visualstudio.com/ "Visual Studio Code"
