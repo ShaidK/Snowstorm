@@ -32,7 +32,7 @@ on:
     branches:
       - build
 
-job:
+jobs:
   deploy_project:
     name: Deploy Snowstorm Project
     runs-on: windows-latest
