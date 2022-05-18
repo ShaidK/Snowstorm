@@ -53,6 +53,9 @@ Further security analysis will be conducted whereby if a security vulnerability
 has been identified, it will generate a issue providing information on the
 security vulnerability.
 
+Once the Pull Request is built & merge, the Continuous Deployment Pipeline will
+build & deploy the "Snowstorm Project" into the "[Visual Studio Marketplace][13]".
+
 <p align="center">
     <img src="./img/polar-bear.png" style="width: 100px; padding: 50px;" />
 </p>
@@ -69,3 +72,4 @@ security vulnerability.
 [10]: https://github.com/ShaidK/Snowstorm/blob/build/package.json "Package JSON"
 [11]: https://code.visualstudio.com/Docs/editor/tasks "Task"
 [12]: https://docs.github.com/en/actions "Github Actions"
+[13]: https://marketplace.visualstudio.com/ "Visual Studio Marketplace"

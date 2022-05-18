@@ -1,5 +1,5 @@
 #
-# File: snowstorm_ci_workflows.yaml | Note: Integrates the Continuous Integration Pipeline for Project
+# File: snowstorm_cd_workflows.yaml | Note: Integrates the Continuous Deployment Pipeline for Project
 #
 
 #
@@ -26,45 +26,35 @@
 # SOFTWARE.
 #
 
-name: Build Snowstorm Project CI
+name: Build Snowstorm Project CD
 on:
-  pull_request:
-    types: [ opened, synchronize ]
+  push:
+    branches:
+      - build
 
-jobs:
-  build_project:
-    name: Build Snowstorm Project
+job:
+  deploy_project:
+    name: Deploy Snowstorm Project
     runs-on: windows-latest
-
-    strategy:
-      matrix:
-        node-version: [ 12.x, 14.x, 16.x ]
 
     steps:
     - name: Checkout Project Repositories
       uses: actions/checkout@v3
-      
-    - name: Configure Environment - V${{ matrix.node-version }}
+
+    - name: Configure Environment - V16
       uses: actions/setup-node@v3
       with:
-        node-version: ${{ matrix.node-version }}
-    
+        node-version: 16.x
+
     - name: Integrate Dependencies 
       run: npm ci
 
-    - name: Execute Security Audit
-      uses: oke-py/npm-audit-action@v2
+    - name: Package Project
+      run: npm run package
+
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v3
       with:
-        issue_title: FIXME - SECURITY ISSUE HAS BEEN IDENTIFIED
-        audit_level: moderate
-        create_pr_comments: false
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-      
-    - name: Lint Markdown Files
-      run: npm run lint:mark --if-present
-      
-    - name: Lint YAML Files
-      run: npm run lint:yaml --if-present
-      
-    - name: Lint JSON Files
-      run: npm run lint:json --if-present
+        name: snowstorm_artifact_vsix
+        path: ./*.vsix
+        retention-days: 30
