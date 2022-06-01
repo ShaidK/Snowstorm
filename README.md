@@ -3,6 +3,8 @@
 <!-- markdownlint-disable-file MD041 -->
 ![Snowstorm](img/snowstorm_backdrop.png)
 
+[![Build Snowstorm Project CD](https://github.com/ShaidK/Snowstorm/actions/workflows/snowstorm_cd_workflows.yaml/badge.svg?branch=build)](https://github.com/ShaidK/Snowstorm/actions/workflows/snowstorm_cd_workflows.yaml)
+
 **INSTALLATION**
 
 The "Snowstorm Project" is a clean & elegant [Visual Studio Code Theme][1] designed
@@ -19,14 +21,14 @@ code --install-extension snowstorm-color-theme-X.X.X.vsix
 
 **BUILD PROJECT**
 
-The "Snowstorm Project" consist of a "[launch.json][5]" & "[tasks.json][6]" file.
 Before you can build the "Snowstorm Project" locally you will need to install
 "[NodeJS][7]". This is required as the "Snowstorm Project" uses "[npm][8]" to
 Build, Lint & Package the Project.
 
-To launch the "Snowstorm Project" you will need to press the "F5" Key within
-[Visual Studio Code][1]. This will open an [Extension Host][9] which will allow
-you to analyse & debug the "Snowstorm Project" locally.
+The "Snowstorm Project" is configured with a "[launch.json][5]" which enables
+the Project to be debug locally by pressing the "F5" Key. This will open an
+[Extension Host][9] which will allow you to analyse & debug the "Snowstorm
+Project" locally.
 
 **NPM SCRIPTS**
 
@@ -34,15 +36,17 @@ The "Snowstorm Project" consist of some "[npm][8]" scripts which are configured
 within the "[package.json][10]" file. These are mainly configured to Build, Lint
 & Package the "Snowstorm Project".
 
-You can run these scripts by running the "[tasks.json][6]" file which will build
-the Project _(See [Task][11] for more information)_ or by running the following
-command:
+You can run these scripts by running the "Build Snowstorm Project" Task defined
+within the "[tasks.json][6]" file. This will automate the task to build, lint &
+package the Project _(See [Task][11] for more information)_.
+
+You can further run this by running the following command:
 
 ```powershell
 npm run build
 ```
 
-**PIPELINES**
+**CONTINOUS INTEGRATION**
 
 The "Snowstorm Project" is configure with a Continuous Integration Pipeline to
 build the Project each time a Pull Request has been opened via "[Github Actions][12]".
@@ -53,8 +57,17 @@ Further security analysis will be conducted whereby if a security vulnerability
 has been identified, it will generate a issue providing information on the
 security vulnerability.
 
+**CONTINOUS DEPLOYMENT**
+
 Once the Pull Request is built & merge, the Continuous Deployment Pipeline will
 build & deploy the "Snowstorm Project" into the "[Visual Studio Marketplace][13]".
+This has been configured with the following:
+
+- _Upload Artifact - This will upload the Package NPM [VSIX File][3] within the
+  Build Pipeline_
+- _Integrate Tag - This will generate a Tag based upon the current NPM Version_
+- _Build Release - This will build a Release which will retain upload the
+  Package NPM [VSIX File][3]_
 
 <p align="center">
     <img src="./img/polar-bear.png" style="width: 100px; padding: 50px;" />

@@ -58,3 +58,20 @@ jobs:
         name: snowstorm_artifact_vsix
         path: ./*.vsix
         retention-days: 30
+
+    - name: Obtain Version
+      id: npm_version
+      uses: martinbeentjes/npm-get-version-action@main
+
+    - name: Integrate Tag
+      id: tag_version
+      uses: mathieudutour/github-tag-action@v6.0
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        custom_tag: ${{ steps.npm_version.outputs.current-version }}
+
+    - name: Build Release
+      uses: ncipollo/release-action@v1
+      with:
+        artifacts: ./*.vsix
+        tag: ${{ steps.tag_version.outputs.new_tag }}
